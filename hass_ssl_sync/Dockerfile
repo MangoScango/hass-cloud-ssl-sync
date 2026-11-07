@@ -1,4 +1,4 @@
-FROM ghcr.io/home-assistant/base:3.24
+FROM ghcr.io/home-assistant/base:latest
 
 COPY run.sh /run.sh
 RUN chmod a+x /run.sh
