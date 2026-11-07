@@ -11,9 +11,7 @@ sync_file() {
 
 bashio::log.info "Starting SSL certificate sync"
 
-while true; do
-    # Update the certificate last so AdGuard reloads the complete pair.
-    sync_file /homeassistant/.cloud/remote_private.pem /ssl/remote_private.pem
-    sync_file /homeassistant/.cloud/remote_fullchain.pem /ssl/remote_fullchain.pem
-    sleep 60
-done
+sync_file /homeassistant/.cloud/remote_private.pem /ssl/remote_private.pem
+sync_file /homeassistant/.cloud/remote_fullchain.pem /ssl/remote_fullchain.pem
+
+bashio::log.info "Finished SSL certificate sync"
