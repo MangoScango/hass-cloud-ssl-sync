@@ -1,0 +1,15 @@
+name: SSL Sync
+version: "1.0.0"
+slug: hass_ssl_sync
+description: Sync Home Assistant Cloud certificates to the SSL folder.
+startup: application
+boot: auto
+init: false
+arch:
+  - aarch64
+  - amd64
+map:
+  - type: homeassistant_config
+    read_only: true
+  - type: ssl
+    read_only: false
